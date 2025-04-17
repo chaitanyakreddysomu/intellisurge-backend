@@ -1,1 +1,1 @@
-web: gunicorn intellisurge.wsgi
+gunicorn backend.wsgi:application
