@@ -1,1 +1,1 @@
-python manage.py migrate && gunicorn backend.wsgi:application
+web: bash -c "python manage.py migrate && gunicorn backend.wsgi:application"
