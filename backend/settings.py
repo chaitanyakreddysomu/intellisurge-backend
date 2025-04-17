@@ -139,15 +139,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'intellisurge',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'USER': 'intellisurge_user',
+        'PASSWORD': 'iLd1HUor5t4u2eRISCXqJMBIQD34MRyO',
+        'HOST': 'dpg-d00f997gi27c73b7rut0-a',
+        'PORT': '5432',
     }
 }
-
 
 DEFAULT_ADMIN_EMAIL = "admin@admin.com"
 DEFAULT_ADMIN_PASSWORD = "$2b$10$HlcvVPqi/56VPUqV.tdc0uus504bg5LQrTg3rw6rP36EvV.y9.1xW" #admin@admin.com
