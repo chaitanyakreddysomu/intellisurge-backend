@@ -9,7 +9,6 @@ from rest_framework import status,generics
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-
 @api_view(['POST'])
 def create_admin(request):
     serializer = AdminSerializer(data=request.data)
@@ -60,4 +59,5 @@ class OurTeamCareerViewSet(viewsets.ModelViewSet):
 class PartnersViewSet(viewsets.ModelViewSet):
     queryset = OurPartners.objects.all()
     serializer_class = PartnersSerializer
+
 

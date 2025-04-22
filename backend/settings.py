@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -137,16 +139,34 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'intellisurge',
+#         'USER': 'intellisurge_user',
+#         'PASSWORD': 'iLd1HUor5t4u2eRISCXqJMBIQD34MRyO',
+#         'HOST': 'dpg-d00f997gi27c73b7rut0-a',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'intellisurge',
-        'USER': 'intellisurge_user',
-        'PASSWORD': 'iLd1HUor5t4u2eRISCXqJMBIQD34MRyO',
-        'HOST': 'dpg-d00f997gi27c73b7rut0-a',
-        'PORT': '5432',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
+
 DEFAULT_ADMIN_EMAIL = "admin@admin.com"
 DEFAULT_ADMIN_PASSWORD = "$2b$10$HlcvVPqi/56VPUqV.tdc0uus504bg5LQrTg3rw6rP36EvV.y9.1xW" #admin@admin.com
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3.S3Storage"
+
+AWS_ACCESS_KEY_ID='AKIASHPQ2NPV5TNHSSXQ'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='intellisurge-images'
+AWS_QUERYSTRING_AUTH=False 
